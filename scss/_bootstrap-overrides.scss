@@ -8,14 +8,13 @@ a {
 }
 
 .btn-primary {
-  background-color: $primary !important;
-  border-color: $primary !important;
+  background-color: fade-out($primary, .1) !important;
+  border-width: 0 !important;
   color: $white !important;
   &:hover,
   &:focus,
   &:active {
-    background-color: darken($primary, 10%) !important;
-    border-color: darken($primary, 10%) !important;
+    background-color: fade-out(darken($primary, 10%), .05) !important;
   }
 }
 
@@ -27,7 +26,6 @@ a {
   &:focus,
   &:active {
     background-color: darken($secondary, 10%) !important;
-    border-color: darken($secondary, 10%) !important;
   }
 }
 
@@ -37,7 +35,7 @@ a {
 
 .btn {
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
-  font-weight: 700;
+  font-weight: 300;
 }
 
 .bg-primary {

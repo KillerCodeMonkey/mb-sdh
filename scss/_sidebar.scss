@@ -12,8 +12,7 @@
   -o-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
   transform: translateX(250px);
-  background: $primary;
-  border-left: 1px solid fade-out($white, 0.9);
+  background: fade-out($primary, .1);
 }
 
 .sidebar-nav {
@@ -23,9 +22,6 @@
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.sidebar-nav li {
 }
 
 .sidebar-nav li.sidebar-nav-item a {
@@ -80,15 +76,15 @@
   right: 15px;
   top: 15px;
 
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 
   text-align: center;
 
   color: $white;
-  background: fade-out($gray-800, .5);
+  background: fade-out($primary, .1);
 
-  line-height: 50px;
+  line-height: 40px;
 
   z-index: 999;
   &:focus,
@@ -96,10 +92,6 @@
     color: $white;
   }
   &:hover {
-    background: $gray-800;
-  }
-  &.active {
-    // background-color: $white;
-    // color: $gray-900;
+    background: fade-out(darken($primary, 10%), .05) !important;
   }
 }

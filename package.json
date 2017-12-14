@@ -11,11 +11,15 @@
     "theme",
     "template"
   ],
-  "license": "MIT",
   "author": "Bengt Weiße",
   "repository": {
     "type": "git",
     "url": "https://github.com/KillerCodeMonkey/mb-sdh"
+  },
+  "scripts": {
+    "start": "node_modules/.bin/gulp dev",
+    "build": "node_modules/.bin/gulp",
+    "deploy": "node_modules/.bin/gh-pages -d ./dist"
   },
   "dependencies": {
     "bootstrap": "^4.0.0-beta.2",
@@ -26,6 +30,7 @@
   },
   "devDependencies": {
     "browser-sync": "2.18.13",
+    "gh-pages": "^1.0.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "3.9.0",
     "gulp-header": "1.8.9",

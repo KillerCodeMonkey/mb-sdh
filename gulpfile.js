@@ -3,6 +3,7 @@ var sass = require('gulp-sass')
 var browserSync = require('browser-sync').create()
 var header = require('gulp-header')
 var cleanCSS = require('gulp-clean-css')
+const imagemin = require('gulp-imagemin')
 var rename = require('gulp-rename')
 var uglify = require('gulp-uglify')
 var pkg = require('./package.json')
@@ -94,6 +95,7 @@ gulp.task('copy', function () {
     .pipe(gulp.dest('dist'))
 
   gulp.src(['img/*'])
+    .pipe(imagemin())
     .pipe(gulp.dest('dist/img'))
 })
 

@@ -9,12 +9,17 @@ a {
 
 .btn-primary {
   background-color: fade-out($primary, .1) !important;
-  border-width: 0 !important;
+  border-color: fade-out($primary, .1) !important;
   color: $white !important;
   &:hover,
   &:focus,
   &:active {
     background-color: fade-out(darken($primary, 10%), .05) !important;
+    border-color: fade-out(darken($primary, 10%), .05) !important;
+  }
+  &:active,
+  &:focus {
+    box-shadow: 0 0 0 .2rem fade-out($primary, .05) !important;
   }
 }
 

@@ -31,7 +31,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 400; }
+  font-weight: 300; }
 
 .text-faded {
   color: rgba(255, 255, 255, 0.7); }
@@ -80,6 +80,7 @@ h6 {
   background-size: cover; }
   .masthead h1 {
     font-size: 4rem;
+    font-weight: 300;
     margin: 0;
     padding: 0; }
   @media (min-width: 992px) {
@@ -228,15 +229,11 @@ h6 {
           margin-bottom: 5rem; }
       .portfolio-item img {
         -webkit-transition: -webkit-clip-path 0.25s ease-out;
+        transition: clip-path 0.25s ease-out;
         -webkit-clip-path: inset(-1px);
         clip-path: inset(-1px); }
-      .portfolio-item:hover img {
-        -webkit-clip-path: inset(2rem);
-        clip-path: inset(2rem); }
       .portfolio-item:hover .caption {
-        background-color: rgba(73, 80, 87, 0.9);
-        -webkit-clip-path: inset(2rem);
-        clip-path: inset(2rem); } }
+        background-color: rgba(73, 80, 87, 0.9); } }
 
 footer.footer {
   padding-top: 5rem;
@@ -261,10 +258,13 @@ a {
 
 .btn-primary {
   background-color: rgba(73, 80, 87, 0.9) !important;
-  border-width: 0 !important;
+  border-color: rgba(73, 80, 87, 0.9) !important;
   color: #fff !important; }
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-    background-color: rgba(50, 55, 59, 0.95) !important; }
+    background-color: rgba(50, 55, 59, 0.95) !important;
+    border-color: rgba(50, 55, 59, 0.95) !important; }
+  .btn-primary:active, .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(73, 80, 87, 0.95) !important; }
 
 .btn-secondary {
   background-color: #ecb807 !important;
